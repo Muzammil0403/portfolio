@@ -35,6 +35,14 @@ const Projects = () => {
       liveUrl: '#',
       githubUrl: '#',
     },
+      {
+      title: 'NHS (National Health Service)',
+      description: 'A responsive web-based Learning Management System for managing courses, students, and real-time instructor interactions.',
+      image: 'https://img.freepik.com/free-photo/learning-education-ideas-insight-intelligence-study-concept_53876-120116.jpg?semt=ais_hybrid&w=740',
+      tech: ['React', 'TypeScript', 'REST API','Node.js','Mysql'],
+      liveUrl: '#',
+      githubUrl: '#',
+    },
   ];
 
   return (
