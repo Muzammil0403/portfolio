@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { FORMSPREE_ENDPOINT } from './formspree.config';
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -56,6 +57,8 @@ const Contact = () => {
               animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
               transition={{ duration: 0.8 }}
               className="space-y-4"
+              action={FORMSPREE_ENDPOINT}
+              method="POST"
             >
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -64,6 +67,8 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
+                  required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
@@ -74,6 +79,8 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
@@ -83,7 +90,9 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
+                  required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
                 ></textarea>
               </div>
