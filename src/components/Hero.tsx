@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
           <p className="text-white text-sm hidden sm:block">mdmuzammil4303@gmail.com</p>
           <img
             onClick={() => setShowPopup(true)}
-            src="https://media-tir3-1.cdn.whatsapp.net/v/t61.24694-24/491868888_1764686384391919_2764122097113796275_n.jpg?ccb=11-4&oh=01_Q5Aa1QFnsbmc9ULt4EYFHDMVuS64d1XBHLKOskhYs4mpIMeJIQ&oe=682957D8&_nc_sid=5e03e0&_nc_cat=100"
+            src="/images/f148a4ac-84e0-4d74-81f3-1d9f16b5517a.jpeg"
             alt="Profile"
             className="w-10 h-10 rounded-full border-2 border-white shadow-md cursor-pointer"
           />
@@ -89,12 +89,12 @@ const Hero: React.FC = () => {
           <div className="rounded-lg p-4 shadow-lg relative">
             <button
               onClick={() => setShowPopup(false)}
-              className="absolute top-2 right-2 text-gray-700 hover:text-red-500 text-xl"
+              className="absolute top-2 right-2 text-white hover:text-red-500 text-xl"
             >
               ×
             </button>
             <img
-              src="https://media-tir3-1.cdn.whatsapp.net/v/t61.24694-24/491868888_1764686384391919_2764122097113796275_n.jpg?ccb=11-4&oh=01_Q5Aa1QFnsbmc9ULt4EYFHDMVuS64d1XBHLKOskhYs4mpIMeJIQ&oe=682957D8&_nc_sid=5e03e0&_nc_cat=100"
+              src="/images/f148a4ac-84e0-4d74-81f3-1d9f16b5517a.jpeg"
               alt="Profile Large"
               className="w-[400px] h-[400px] object-cover rounded-full"
             />

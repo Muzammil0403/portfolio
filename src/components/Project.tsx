@@ -35,6 +35,14 @@ const Projects = () => {
       liveUrl: '#',
       githubUrl: '#',
     },
+      {
+      title: 'NHS (National Health Service)',
+      description: 'A comprehensive web-based platform designed to support the National Health Service, enabling efficient management of patient records, appointment scheduling, and healthcare professional coordination. The system ensures secure data handling, real-time updates, and seamless user interaction for both patients and NHS staff.',
+      image: '/images/nhs title display.jpeg',
+      tech: ['React', 'TypeScript', 'REST API','Node.js','Mysql'],
+      liveUrl: '#',
+      githubUrl: '#',
+    },
   ];
 
   return (
