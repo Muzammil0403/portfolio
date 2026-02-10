@@ -1,7 +1,7 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ExternalLink, Github } from 'lucide-react';
+// import { ExternalLink, Github } from 'lucide-react';
 
 
 const Projects = () => {
