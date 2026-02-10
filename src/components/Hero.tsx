@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Menu, X } from 'lucide-react';
+import { Linkedin, Mail, Menu, X } from 'lucide-react';
+import Image from '../images/hemanth.jpeg.jpeg';
 
 const Hero: React.FC = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -31,10 +32,10 @@ const Hero: React.FC = () => {
 
         {/* Email and profile picture */}
         <div className="flex items-center gap-4">
-          <p className="text-white text-sm hidden sm:block">mdmuzammil4303@gmail.com</p>
+          <p className="text-white text-sm hidden sm:block">hemanthlucky417@gmail.com</p>
           <img
             onClick={() => setShowPopup(true)}
-            src="/images/f148a4ac-84e0-4d74-81f3-1d9f16b5517a.jpeg"
+            src={Image}
             alt="Profile"
             className="w-10 h-10 rounded-full border-2 border-white shadow-md cursor-pointer"
           />
@@ -94,7 +95,7 @@ const Hero: React.FC = () => {
               ×
             </button>
             <img
-              src="/images/f148a4ac-84e0-4d74-81f3-1d9f16b5517a.jpeg"
+              src={Image}
               alt="Profile Large"
               className="w-[400px] h-[400px] object-cover rounded-full"
             />
@@ -115,7 +116,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-4"
           >
-            Mohammed Muzammil
+            Hemanth Kumar N
           </motion.h1>
 
           <motion.p 
@@ -124,7 +125,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg sm:text-xl text-gray-300 mb-10 font-light"
           >
-            BCA Graduate | Full Stack Developer
+            Software Test Engineer
           </motion.p>
 
           <motion.div 
@@ -133,11 +134,11 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex justify-center space-x-6"
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+            {/* <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
               className="p-3 bg-gray-800/50 rounded-full text-gray-300 hover:text-white hover:bg-gray-700/50 transition-all duration-300">
               <Github className="h-5 w-5" />
-            </a>
-            <a href="https://www.linkedin.com/in/mdmuzammil0405/" target="_blank" rel="noopener noreferrer"
+            </a> */}
+            <a href="https://www.linkedin.com/in/hemanth-kumar-492673326/" target="_blank" rel="noopener noreferrer"
               className="p-3 bg-gray-800/50 rounded-full text-gray-300 hover:text-white hover:bg-gray-700/50 transition-all duration-300">
               <Linkedin className="h-5 w-5" />
             </a>

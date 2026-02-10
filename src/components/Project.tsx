@@ -12,36 +12,20 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A frontend e-commerce solution built with React, showcasing product listings, shopping cart functionality, and responsive design.',
+      title: 'E-Commerce Web Application',
+      description: 'Comprehensive manual testing project involving requirement analysis, test case design, and execution of functional, smoke, and regression testing cycles.',
       image: 'https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg',
-      tech: ['React', 'Tailwind', 'Typscript'],
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      title: 'BMI (Body Mass Index)',
-      description: 'A simple application to calculate Body Mass Index (BMI) using user input for height and weight, helping assess overall health status',
-      image: 'https://fluentforms.com/wp-content/uploads/2023/02/Create_a_WordPress_BMI_Calculator_for_Health_Focused_Website_01-3-1.png',
-      tech: ['React', 'Tailwind CSS','TypeScript'],
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      title: 'LMS (Learning Managment System)',
-      description: 'A responsive web-based Learning Management System for managing courses, students, and real-time instructor interactions.',
-      image: 'https://img.freepik.com/free-photo/learning-education-ideas-insight-intelligence-study-concept_53876-120116.jpg?semt=ais_hybrid&w=740',
-      tech: ['React', 'TypeScript', 'REST API','Node.js','Mysql'],
-      liveUrl: '#',
-      githubUrl: '#',
+      liveUrl: 'https://example.com/ecommerce',
+      githubUrl: 'https://github.com/yourusername/ecommerce',
     },
       {
-      title: 'NHS (National Health Service)',
-      description: 'A comprehensive web-based platform designed to support the National Health Service, enabling efficient management of patient records, appointment scheduling, and healthcare professional coordination. The system ensures secure data handling, real-time updates, and seamless user interaction for both patients and NHS staff.',
-      image: '/images/nhs title display.jpeg',
-      tech: ['React', 'TypeScript', 'REST API','Node.js','Mysql'],
-      liveUrl: '#',
-      githubUrl: '#',
+      title:'Gym Management System',
+      description: 'A comprehensive web-based platform designed to support gym management, enabling efficient management of member records, class scheduling, and trainer coordination. The system ensures secure data handling, real-time updates, and seamless user interaction for both members and staff.',
+      image: 'https://5.imimg.com/data5/AH/BM/YS/SELLER-96796771/gym-management-software-500x500.png',
+      tech: [],
+      liveUrl: 'https://example.com/gym-management',
+      githubUrl: 'https://github.com/yourusername/gym-management',
+     
     },
   ];
 
@@ -57,7 +41,7 @@ const Projects = () => {
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Projects</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Here are some of my recent projects that showcase my skills and experience.
+            Here are some of my Manual Testing Projects & Academic Projects that showcase my skills and experience.
           </p>
         </motion.div>
 
@@ -81,7 +65,7 @@ const Projects = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech, techIndex) => (
+                  {(project.tech ?? []).map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm"
@@ -90,7 +74,7 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex justify-between">
+                {/* <div className="flex justify-between">
                   <a
                     href={project.liveUrl}
                     target="_blank"
@@ -109,7 +93,7 @@ const Projects = () => {
                     <Github className="h-4 w-4 mr-1" />
                     Code
                   </a>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}

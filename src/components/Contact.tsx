@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { FORMSPREE_ENDPOINT } from './formspree.config';
+// import { FORMSPREE_ENDPOINT } from './formspree.config';
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -39,15 +39,15 @@ const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Mail className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-600">mdmuzammil4303@gmail.com</span>
+                  <span className="text-gray-600">hemanthlucky417@gmail.com</span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-600">+91 97394 68201</span>
+                  <span className="text-gray-600">+91 81971 19215 |</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-600">Karnataka, Bangalore, India</span>
+                  <span className="text-gray-600">Kolar, Karnataka, India</span>
                 </div>
               </div>
             </motion.div>
@@ -57,7 +57,7 @@ const Contact = () => {
               animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
               transition={{ duration: 0.8 }}
               className="space-y-4"
-              action={FORMSPREE_ENDPOINT}
+              // action={FORMSPREE_ENDPOINT}
               method="POST"
             >
               <div>
