@@ -2,17 +2,57 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const Skills = () => {
+type SkillsType = {
+  [category: string]: string[];
+};
+
+const Skills: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
-  const skills = {
-    'Frontend': ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'HTML5/CSS3'],
-    'Backend': ['Node.js', 'Express', 'MySQL'],
-    'Tools': ['Git', 'Chat Gpt', 'VS Code'],
-    'Design': ['Figma', 'Adobe XD', 'Responsive Design', 'UI/UX Principles'],
+  const skills: SkillsType = {
+    'Testing Types': [
+      'Manual Testing',
+      'Automation Testing',
+      'Smoke Testing',
+      'Sanity Testing',
+      'Functional Testing',
+      'Integration Testing',
+      'System Testing',
+      'Regression Testing',
+    ],
+
+    'Automation Tools': [
+      'Selenium WebDriver',
+      'Python',
+      'PyTest',
+      'Test Automation Framework',
+      'Data Driven Testing',
+      'Dynamic Locators',
+      'Page Object Model',
+      'Assertions',
+    ],
+
+    'Testing Concepts': [
+      'SDLC',
+      'STLC',
+      'Test Planning',
+      'Test Case Design',
+      'Test Execution',
+      'Defect Life Cycle',
+      'Severity & Priority',
+    ],
+
+    'Technical & Process': [
+      'Python (Core, OOPS)',
+      'SQL (CRUD, Joins)',
+      'Jira',
+      'GitHub',
+      'Agile',
+      'Scrum',
+    ],
   };
 
   return (
@@ -25,9 +65,12 @@ const Skills = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Skills & Expertise</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Skills & Expertise
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            I specialize in full-stack development with a focus on modern web technologies.
+            I specialize in Manual and Automation Testing with strong knowledge of
+            QA processes and test automation frameworks.
           </p>
         </motion.div>
 
@@ -40,7 +83,9 @@ const Skills = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="bg-gray-50 rounded-lg p-6"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">{category}</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                {category}
+              </h3>
               <ul className="space-y-2">
                 {items.map((skill, skillIndex) => (
                   <li
